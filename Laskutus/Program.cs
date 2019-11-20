@@ -29,26 +29,26 @@ namespace Laskutus
             Finvoice eLasku = new Finvoice();
 
             BuyerPartyDetailsType ostaja = new BuyerPartyDetailsType();
-            SellerPartyDetailsType myyja = new SellerPartyDetailsType();
-            InvoiceRowType [] tuotteet = new InvoiceRowType[1];
-
             string[] ostajanNimi = new string[] { "Monosen hiihtoseura Ry" };
             ostaja.BuyerOrganisationName = ostajanNimi;
 
+            SellerPartyDetailsType myyja = new SellerPartyDetailsType();
             string[] myyjaOrganisaatio = new string[] { "Suksikauppa Oy" };
             myyja.SellerOrganisationName = myyjaOrganisaatio;
 
-            //Artikkeli[] ostoskori = new Artikkeli[3];
-            //Suksi hiihdin = new Suksi();
+
+            InvoiceRowType[] ostoskori = new InvoiceRowType[2];
+            //Suksi ostos1 = new Suksi();
             //InvoiceRowType[] ostoskori = new InvoiceRowType[3];
 
             //ostoskori[0] = new Suksi();
             //ostoskori[1] = new Sauva();
             //ostoskori[2] = new Mono();
-            unitAmountUN hinta = new unitAmountUN();
-            hinta.Value = "34.2";
+            unitAmountUN hinta = new unitAmountUN {
+                Value = "34.2"
+            };
 
-            tuotteet[0] = new InvoiceRowType
+            ostoskori[0] = new InvoiceRowType
             {
                 Items = new object[]
                 {
@@ -63,9 +63,27 @@ namespace Laskutus
                 }
             };
 
+            hinta.Value = "29.38";
+            ostoskori[1] = new InvoiceRowType
+            {
+                Items = new object[]
+                {
+                    "Mono",
+                    hinta,
+                },
+
+                ItemsElementName = new[]
+                {
+                ItemsChoiceType.ArticleName,
+                ItemsChoiceType.UnitPriceAmount,
+                }
+            };
+
+
+
             eLasku.SellerPartyDetails = myyja;
             eLasku.BuyerPartyDetails = ostaja;
-            eLasku.InvoiceRow = tuotteet;
+            eLasku.InvoiceRow = ostoskori;
 
 
             serializer.Serialize(writer, eLasku);

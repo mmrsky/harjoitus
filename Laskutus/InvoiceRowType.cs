@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Laskutus
-{
-    public class Mono : InvoiceRowType
+
+    public partial class InvoiceRowType
     {
+        // Todo
+
     }
-}
+

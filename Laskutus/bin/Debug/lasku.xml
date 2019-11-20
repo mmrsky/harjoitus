@@ -8,6 +8,10 @@
   </BuyerPartyDetails>
   <InvoiceRow>
     <ArticleName>Suksi</ArticleName>
-    <UnitPriceAmount>34.2</UnitPriceAmount>
+    <UnitPriceAmount>29.38</UnitPriceAmount>
+  </InvoiceRow>
+  <InvoiceRow>
+    <ArticleName>Mono</ArticleName>
+    <UnitPriceAmount>29.38</UnitPriceAmount>
   </InvoiceRow>
 </Finvoice>
