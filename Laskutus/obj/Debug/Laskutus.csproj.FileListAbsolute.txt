@@ -1,0 +1,6 @@
+C:\2019Opiskeluprojekti\harjoitus\Laskutus\bin\Debug\Laskutus.exe.config
+C:\2019Opiskeluprojekti\harjoitus\Laskutus\bin\Debug\Laskutus.exe
+C:\2019Opiskeluprojekti\harjoitus\Laskutus\bin\Debug\Laskutus.pdb
+C:\2019Opiskeluprojekti\harjoitus\Laskutus\obj\Debug\Laskutus.csprojAssemblyReference.cache
+C:\2019Opiskeluprojekti\harjoitus\Laskutus\obj\Debug\Laskutus.exe
+C:\2019Opiskeluprojekti\harjoitus\Laskutus\obj\Debug\Laskutus.pdb

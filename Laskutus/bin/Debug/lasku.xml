@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Finvoice xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="1.3">
+  <SellerPartyDetails>
+    <SellerOrganisationName>Suksikauppa Oy</SellerOrganisationName>
+  </SellerPartyDetails>
+  <BuyerPartyDetails>
+    <BuyerOrganisationName>Monosen hiihtoseura Ry</BuyerOrganisationName>
+  </BuyerPartyDetails>
+  <InvoiceRow>
+    <ArticleName>Suksi</ArticleName>
+    <UnitPriceAmount>34.2</UnitPriceAmount>
+  </InvoiceRow>
+</Finvoice>
