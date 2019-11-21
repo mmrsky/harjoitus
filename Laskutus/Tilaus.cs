@@ -13,9 +13,9 @@ namespace Laskutus
         {
             Console.WriteLine("Tilaus alustettu");
         }
-        public void LisaaTuote()
+        public void LisaaTuote(string pNimi, decimal pHinta)
         {
-
+            ostoskori.Add(new Tuote(pNimi, pHinta));
         }
         public void LisaaOstajanTiedot()
         {
@@ -29,6 +29,13 @@ namespace Laskutus
 
         }
 
+        public void TulostaTuotteet()
+        {
+            foreach (var ostos in ostoskori)
+            {
+                ostos.Tulosta();
+            }
+        }
 
     }
 }

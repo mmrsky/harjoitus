@@ -8,7 +8,22 @@ namespace Laskutus
 {
     class Tuote
     {
-        string[] nimi;
+        string nimi;
         decimal hinta;
+        public Tuote(string pNimi, decimal pHinta)
+        {
+            nimi = pNimi;
+            hinta = pHinta;
+        }
+
+        public void LisaaXmlLaskulle()
+        {
+
+        }
+
+        public void Tulosta()
+        {
+            Console.WriteLine(nimi + "  " + hinta);
+        }
     }
 }

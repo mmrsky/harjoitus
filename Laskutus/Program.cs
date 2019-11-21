@@ -17,6 +17,8 @@ namespace Laskutus
             TeeXMLLasku(tiedostonimi);
 
             Tilaus tilaus = new Tilaus();
+            tilaus.LisaaTuote("Suksi", (decimal)23.12);
+            tilaus.TulostaTuotteet();
             Console.ReadKey();
         }
         static private void TeeXMLLasku(string tiedostonimi)
