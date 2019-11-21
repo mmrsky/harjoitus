@@ -15,6 +15,9 @@ namespace Laskutus
         {
             string tiedostonimi = "lasku.xml";
             TeeXMLLasku(tiedostonimi);
+
+            Tilaus tilaus = new Tilaus();
+            Console.ReadKey();
         }
         static private void TeeXMLLasku(string tiedostonimi)
         {
