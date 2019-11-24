@@ -5,7 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Laskutus
-{
+{   /// <summary>
+    /// Henkilo- luokka toimii parent-luokkana Ostaja ja Myyja luokille
+    /// </summary>
     class Henkilo
     {
         private string _nimi;
@@ -14,7 +16,9 @@ namespace Laskutus
                              set => _nimi = value; }
         public string Osoite { get => _osoite;
                                set => _osoite = value; }
-
+        /// <summary>
+        /// Nimi ja osoitetietojen syöttäminen.
+        /// </summary>
         protected void SyotaTiedot()
         {
             Console.Write("Anna nimi: ");

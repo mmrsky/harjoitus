@@ -1,17 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Finvoice xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="1.3">
   <SellerPartyDetails>
-    <SellerOrganisationName>rtyuruy</SellerOrganisationName>
+    <SellerOrganisationName>Kalle Kauppias</SellerOrganisationName>
   </SellerPartyDetails>
   <BuyerPartyDetails>
-    <BuyerOrganisationName>sged</BuyerOrganisationName>
+    <BuyerOrganisationName>Sami Seteli</BuyerOrganisationName>
   </BuyerPartyDetails>
   <InvoiceRow>
-    <ArticleName>3efwsf</ArticleName>
-    <UnitPriceAmount>34</UnitPriceAmount>
+    <ArticleName>Sipuli</ArticleName>
+    <UnitPriceAmount>1.2</UnitPriceAmount>
   </InvoiceRow>
   <InvoiceRow>
-    <ArticleName>ewrfwef</ArticleName>
-    <UnitPriceAmount>223</UnitPriceAmount>
+    <ArticleName>Porkkana</ArticleName>
+    <UnitPriceAmount>0.50</UnitPriceAmount>
+  </InvoiceRow>
+  <InvoiceRow>
+    <ArticleName>Jakoavain</ArticleName>
+    <UnitPriceAmount>3.32</UnitPriceAmount>
   </InvoiceRow>
 </Finvoice>

@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace Laskutus
 {
+    /// <summary>
+    /// Ostaja tietojen hallinta
+    /// </summary>
     class Ostaja : Henkilo
     {
         public new void AnnaTiedot()
