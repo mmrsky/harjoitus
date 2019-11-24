@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,22 +9,35 @@ namespace Laskutus
 {
     class Tuote
     {
-        string nimi;
-        decimal hinta;
+        private string _nimi;
+        private decimal _hinta;
+        public string Nimi { get => _nimi;
+                             set => _nimi = value; }
+        public decimal Hinta { get => _hinta;
+                               set => _hinta = value; }
+
+        public Tuote()
+        {
+        }
         public Tuote(string pNimi, decimal pHinta)
         {
-            nimi = pNimi;
-            hinta = pHinta;
+            Nimi = pNimi;
+            Hinta = pHinta;
         }
 
-        public void LisaaXmlLaskulle()
-        {
-
-        }
-
+        
         public void Tulosta()
         {
-            Console.WriteLine(nimi + "  " + hinta);
+            Console.WriteLine(Nimi + "  " + Hinta);
+        }
+
+        public void AnnaTuote()
+        {
+            Console.Write("Anna tuotteen nimi: ");
+            Nimi = Console.ReadLine();
+
+            Console.Write("Anna tuotteen hinta: ");
+            Hinta = Convert.ToDecimal(Console.ReadLine(), CultureInfo.InvariantCulture);
         }
     }
 }

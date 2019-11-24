@@ -45,7 +45,10 @@
   <ItemGroup>
     <Compile Include="Artikkeli.cs" />
     <Compile Include="Finvoice3_0.cs" />
+    <Compile Include="Henkilo.cs" />
     <Compile Include="InvoiceRowType.cs" />
+    <Compile Include="Myyja.cs" />
+    <Compile Include="Ostaja.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Tilaus.cs" />

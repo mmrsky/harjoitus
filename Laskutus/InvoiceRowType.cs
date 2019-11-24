@@ -7,7 +7,6 @@ using System.Threading.Tasks;
 
     public partial class InvoiceRowType
     {
-        // Todo
-
+ 
     }
 
