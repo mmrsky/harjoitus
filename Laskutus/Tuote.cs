@@ -6,9 +6,11 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Laskutus
-{   /// <summary>
+{
+    /// <summary>
     /// Tuote luokka
     /// </summary>
+    [Serializable]
     class Tuote
     {
         private string _nimi;
@@ -17,14 +19,16 @@ namespace Laskutus
                              set => _nimi = value; }
         public decimal Hinta { get => _hinta;
                                set => _hinta = value; }
+
         /// <summary>
-        /// Konstructori ilman parametreja
+        /// Constructor ilman parametreja
         /// </summary>
         public Tuote()
         {
         }
+
         /// <summary>
-        /// Konstruktori, jolla voidaan luoda uusi tuote antamalla nimi ja hinta parametreina.
+        /// Constructor, jolla voidaan luoda uusi tuote antamalla nimi ja hinta parametreina.
         /// </summary>
         /// <param name="pNimi"></param>
         /// <param name="pHinta"></param>
@@ -46,11 +50,22 @@ namespace Laskutus
         /// </summary>
         public void AnnaTuote()
         {
-            Console.Write("Anna tuotteen nimi: ");
+            Console.Write("\nAnna tuotteen nimi: ");
             Nimi = Console.ReadLine();
+            decimal hinta = 0;
 
-            Console.Write("Anna tuotteen hinta: ");
-            Hinta = Convert.ToDecimal(Console.ReadLine(), CultureInfo.InvariantCulture);
+            do
+            {
+                Console.Write("Anna tuotteen hinta: ");
+                if (decimal.TryParse(Console.ReadLine(), out hinta))
+                {
+                    Hinta = hinta;
+                }
+                else
+                {
+                    Console.WriteLine("Hinta ei ole kelvollinen lukuarvo!");
+                }
+            } while (hinta == 0);
         }
     }
 }

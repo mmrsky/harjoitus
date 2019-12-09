@@ -8,6 +8,7 @@ namespace Laskutus
 {   /// <summary>
     /// Henkilo- luokka toimii parent-luokkana Ostaja ja Myyja luokille
     /// </summary>
+    [Serializable]
     class Henkilo
     {
         private string _nimi;

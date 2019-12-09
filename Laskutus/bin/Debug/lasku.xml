@@ -4,18 +4,22 @@
     <SellerOrganisationName>Kalle Kauppias</SellerOrganisationName>
   </SellerPartyDetails>
   <BuyerPartyDetails>
-    <BuyerOrganisationName>Sami Seteli</BuyerOrganisationName>
+    <BuyerOrganisationName>Olli Ostaja</BuyerOrganisationName>
   </BuyerPartyDetails>
   <InvoiceRow>
-    <ArticleName>Sipuli</ArticleName>
-    <UnitPriceAmount>1.2</UnitPriceAmount>
+    <ArticleName>Sipulipussi</ArticleName>
+    <UnitPriceAmount>2.65</UnitPriceAmount>
   </InvoiceRow>
   <InvoiceRow>
-    <ArticleName>Porkkana</ArticleName>
-    <UnitPriceAmount>0.50</UnitPriceAmount>
+    <ArticleName>Kurkku</ArticleName>
+    <UnitPriceAmount>3.56</UnitPriceAmount>
   </InvoiceRow>
   <InvoiceRow>
-    <ArticleName>Jakoavain</ArticleName>
-    <UnitPriceAmount>3.32</UnitPriceAmount>
+    <ArticleName>Makkara</ArticleName>
+    <UnitPriceAmount>2.99</UnitPriceAmount>
+  </InvoiceRow>
+  <InvoiceRow>
+    <ArticleName>Polkupyörä</ArticleName>
+    <UnitPriceAmount>234.3</UnitPriceAmount>
   </InvoiceRow>
 </Finvoice>

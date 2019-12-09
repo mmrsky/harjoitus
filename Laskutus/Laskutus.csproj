@@ -43,9 +43,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Artikkeli.cs" />
+    <Compile Include="TalletaLataa.cs" />
     <Compile Include="Finvoice3_0.cs" />
     <Compile Include="Henkilo.cs" />
+    <Compile Include="ITalletaLataa.cs" />
     <Compile Include="InvoiceRowType.cs" />
     <Compile Include="Myyja.cs" />
     <Compile Include="Ostaja.cs" />

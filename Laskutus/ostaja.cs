@@ -7,13 +7,15 @@ using System.Threading.Tasks;
 namespace Laskutus
 {
     /// <summary>
-    /// Ostaja tietojen hallinta
+    /// Ostajan tietojen hallinta
     /// </summary>
+    [Serializable]
     class Ostaja : Henkilo
     {
+       
         public new void AnnaTiedot()
         {
-            Console.WriteLine("Anna ostajan tiedot");
+            Console.WriteLine("\nAnna ostajan tiedot");
             SyotaTiedot(); 
         }
     }

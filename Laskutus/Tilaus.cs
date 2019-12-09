@@ -7,12 +7,14 @@ using System.Threading.Tasks;
 using System.Xml.Serialization;
 using System.IO;
 
+
 namespace Laskutus
 {
     /// <summary>
     /// Tilaus luokka muodostaa tilauksen ja tuottaa siitä Finvoice XML- tiedoston.
     /// Finvoice luokka on generoitu XSD.EXE- työkalulla. Finvoice3_0.xsd:n pohjalta.
     /// </summary>
+    [Serializable]
     class Tilaus
     {
         List<Tuote> tuoterivit = new List<Tuote>();
@@ -20,13 +22,15 @@ namespace Laskutus
         readonly SellerPartyDetailsType XMLMyyja = new SellerPartyDetailsType();
         readonly BuyerPartyDetailsType XMLOstaja = new BuyerPartyDetailsType();
 
-        /// <summary>
-        /// Konstruktori
-        /// </summary>
+        Ostaja ostaja = new Ostaja();
+        public Myyja myyja = new Myyja();
+
         public Tilaus()
         {
             Console.WriteLine("Tilaus alustettu");
         }
+
+
         /// <summary>
         /// Tuotteen lisääminen tilaukseen parametreilla.
         /// </summary>
@@ -36,6 +40,7 @@ namespace Laskutus
         {
             tuoterivit.Add(new Tuote(pNimi, pHinta));
         }
+
         /// <summary>
         /// Tuotteen lisääminen luokkaan komentorivisyötteellä.
         /// </summary>
@@ -45,12 +50,13 @@ namespace Laskutus
             uusiTuote.AnnaTuote();
             tuoterivit.Add(uusiTuote);
         }
+
         /// <summary>
         /// Ostajan tietojen lisääminen.
         /// </summary>
         public void LisaaOstajanTiedot()
         {
-            Ostaja ostaja = new Ostaja();
+            //Ostaja ostaja = new Ostaja();
             ostaja.AnnaTiedot();
             XMLOstaja.BuyerOrganisationName = new string[] { ostaja.Nimi};
         }
@@ -60,7 +66,7 @@ namespace Laskutus
         /// </summary>
         public void LisaaMyyjanTiedot()
         {
-            Myyja myyja = new Myyja();
+            //Myyja myyja = new Myyja();
             myyja.AnnaTiedot();
             XMLMyyja.SellerOrganisationName = new string[] { myyja.Nimi }; 
         }
@@ -120,13 +126,15 @@ namespace Laskutus
         /// <summary>
         /// Tulostetaan tilauksen tuoterivit konsoli-ikkunaan.
         /// </summary>
-        public void TulostaTuotteet()
+        public void TulostaTilaus()
         {
+            Console.WriteLine("\nMyyjä: " + myyja.Nimi + " Osoite: " + myyja.Osoite);
+            Console.WriteLine("Ostaja: " + ostaja.Nimi + " Osoite: " + ostaja.Osoite + "\n");
             foreach (var ostos in tuoterivit)
             {
                 ostos.Tulosta();
             }
+            Console.WriteLine("\n-----------------------------------------------------------");
         }
-
     }
 }

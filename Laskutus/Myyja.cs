@@ -6,14 +6,17 @@ using System.Threading.Tasks;
 
 namespace Laskutus
 {
+
     /// <summary>
     /// Myyjän tietojen hallinta
     /// </summary>
+    [Serializable]
     class Myyja : Henkilo
     {
         public new void AnnaTiedot()
         {
-            Console.WriteLine("Anna myyjän tiedot");
+            Console.WriteLine("\nUusi tilaus");
+            Console.WriteLine("\nAnna myyjän tiedot");
             SyotaTiedot();
         }
     }

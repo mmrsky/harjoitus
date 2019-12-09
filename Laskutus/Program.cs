@@ -11,11 +11,21 @@ namespace Laskutus
         static void Main(string[] args)
         {
             string tiedostonimi = "lasku.xml";
-
             Tilaus tilaus = new Tilaus();
-            //tilaus.LisaaTuote("Suksi", (decimal)23.12);
-            tilaus.LisaaMyyjanTiedot();
-            tilaus.LisaaOstajanTiedot();
+            TalletaLataa tallentaja = new TalletaLataa();
+
+            Console.WriteLine("Haluatko ladata tallennetun tilauksen (k/e)?");
+            if (Console.ReadKey().Key == ConsoleKey.K)
+            {
+                tallentaja.Lataa(ref tilaus);
+                tilaus.TulostaTilaus();
+            }
+            else
+            {
+                tilaus.LisaaMyyjanTiedot();
+                tilaus.LisaaOstajanTiedot();
+            }
+
 
             do
             {
@@ -23,11 +33,13 @@ namespace Laskutus
                 Console.WriteLine("Paina Enter syöttääksesi uuden tuotteen");
             } while (Console.ReadKey().Key == ConsoleKey.Enter);
 
-
-            tilaus.TulostaTuotteet();
+            tilaus.TulostaTilaus();
             tilaus.LisaaTuotteetXMLTiedostoon();
             tilaus.KirjoitaLaskuTiedostoon(tiedostonimi);
+
+            tallentaja.Talleta(tilaus);
             Console.ReadKey();
+
         }
     }
 }
