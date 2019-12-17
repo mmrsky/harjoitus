@@ -1,1 +1,1 @@
-# harjoitus
+C# olio-ohjelmointi harjoitus

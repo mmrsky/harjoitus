@@ -6,28 +6,44 @@ using System.Threading.Tasks;
 
 namespace Laskutus
 {
+    /// <summary>
+    /// Ohjelma tilauksen tekemiseen. Ohjelma kysyy myyjän ja ostajan tiedot ja sen jälkeen tilausrivit
+    /// Kun tilaus on valmis muodostetaan siitä XML-muotoinen finvoice - lasku ja tilaus talletetaan 
+    /// levylle jotta siihen voidaan niin halutessaan lisätä uusia tilausrivejä.
+    /// </summary>
     class Program
     {
         static void Main(string[] args)
         {
             string tiedostonimi = "lasku.xml";
+            string binTiedostonimi = "savestate.bin";
             Tilaus tilaus = new Tilaus();
-            TalletaLataa tallentaja = new TalletaLataa();
+            TalletaLataa poistaja = new TalletaLataa();
+
+            ITalleta tallentaja = new TalletaLataa(); 
+            ILataa lataaja = new TalletaLataa();
 
             Console.WriteLine("Haluatko ladata tallennetun tilauksen (k/e)?");
-            if (Console.ReadKey().Key == ConsoleKey.K)
+            Console.WriteLine("Voit poistaa tallennuksen painamalla p - näppäintä.");
+            ConsoleKey pressedKey = Console.ReadKey().Key;
+            if (pressedKey == ConsoleKey.K) // Ladataan talletettu tilaus
             {
-                tallentaja.Lataa(ref tilaus);
+                lataaja.Lataa(ref tilaus);
                 tilaus.TulostaTilaus();
             }
-            else
+
+            else if (pressedKey == ConsoleKey.P) // Poistetaan talletettu tilaus
+            {
+                poistaja.PoistaTallennus(binTiedostonimi);
+            }
+            
+            if (pressedKey != ConsoleKey.K) // Jatketaan uuden tilauksen tekemistä
             {
                 tilaus.LisaaMyyjanTiedot();
                 tilaus.LisaaOstajanTiedot();
             }
 
-
-            do
+            do // Lisätään tuotteita tilaukseen, niin kauan kunnes käyttäjä painaa muuta kuin Enter- näppäintä
             {
                 tilaus.LisaaTuote();
                 Console.WriteLine("Paina Enter syöttääksesi uuden tuotteen");

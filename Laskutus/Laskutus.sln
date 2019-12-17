@@ -5,8 +5,6 @@ VisualStudioVersion = 16.0.29509.3
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Laskutus", "Laskutus.csproj", "{9F6F6C7F-2A44-42F4-ABAC-F202443CC39E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LaskutusUnitTest", "..\LaskutusUnitTest\LaskutusUnitTest.csproj", "{4C168A5C-B69F-47E6-952A-EBEB74475E1A}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{310F507F-98E7-4893-97F1-93EBF0630CC0}"
 EndProject
 Global
@@ -19,10 +17,6 @@ Global
 		{9F6F6C7F-2A44-42F4-ABAC-F202443CC39E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9F6F6C7F-2A44-42F4-ABAC-F202443CC39E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9F6F6C7F-2A44-42F4-ABAC-F202443CC39E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{4C168A5C-B69F-47E6-952A-EBEB74475E1A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4C168A5C-B69F-47E6-952A-EBEB74475E1A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4C168A5C-B69F-47E6-952A-EBEB74475E1A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4C168A5C-B69F-47E6-952A-EBEB74475E1A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

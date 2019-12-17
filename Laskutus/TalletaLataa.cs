@@ -9,8 +9,16 @@ using System.Runtime.Serialization.Formatters.Binary;
 
 namespace Laskutus
 {
-    class TalletaLataa : ITalleta, ILataa
+    /// <summary>
+    /// Tilauksen talletus ja lataus luokka. Tämä luokka perii Poista - luokan ja toteuttaa rajapinnat
+    /// Italleta ja Ilataa
+    /// </summary>
+    class TalletaLataa : Poista, ITalleta, ILataa
     {
+        /// <summary>
+        /// Ladataan binäärimuodossa tallennettu tilaus
+        /// </summary>
+        /// <param name="ostoskori"></param>
         public void Lataa(ref Tilaus ostoskori)
         {
             IFormatter formatter = new BinaryFormatter();
@@ -20,6 +28,10 @@ namespace Laskutus
             stream.Close();
         }
 
+        /// <summary>
+        /// Tallennetaan tilaus binäärimuodossa
+        /// </summary>
+        /// <param name="ostoskori"></param>
         public void Talleta(Tilaus ostoskori)
         {
             if  (ostoskori != null)

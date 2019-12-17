@@ -5,7 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Laskutus
-{   /// <summary>
+{  
+    /// <summary>
     /// Henkilo- luokka toimii parent-luokkana Ostaja ja Myyja luokille
     /// </summary>
     [Serializable]
@@ -29,6 +30,9 @@ namespace Laskutus
             Osoite = Console.ReadLine();
         }
 
+        /// <summary>
+        /// Syötetään henkilön tiedot
+        /// </summary>
         public void AnnaTiedot()
         {
             SyotaTiedot();

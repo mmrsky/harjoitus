@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Poista.cs" />
     <Compile Include="TalletaLataa.cs" />
     <Compile Include="Finvoice3_0.cs" />
     <Compile Include="Henkilo.cs" />

@@ -1,25 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Finvoice xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="1.3">
   <SellerPartyDetails>
-    <SellerOrganisationName>Kalle Kauppias</SellerOrganisationName>
+    <SellerOrganisationName>ddd</SellerOrganisationName>
   </SellerPartyDetails>
   <BuyerPartyDetails>
-    <BuyerOrganisationName>Olli Ostaja</BuyerOrganisationName>
+    <BuyerOrganisationName>pe</BuyerOrganisationName>
   </BuyerPartyDetails>
   <InvoiceRow>
-    <ArticleName>Sipulipussi</ArticleName>
-    <UnitPriceAmount>2.65</UnitPriceAmount>
+    <ArticleName>3</ArticleName>
+    <UnitPriceAmount>322</UnitPriceAmount>
   </InvoiceRow>
   <InvoiceRow>
-    <ArticleName>Kurkku</ArticleName>
-    <UnitPriceAmount>3.56</UnitPriceAmount>
+    <ArticleName>3ff</ArticleName>
+    <UnitPriceAmount>322</UnitPriceAmount>
   </InvoiceRow>
   <InvoiceRow>
-    <ArticleName>Makkara</ArticleName>
-    <UnitPriceAmount>2.99</UnitPriceAmount>
-  </InvoiceRow>
-  <InvoiceRow>
-    <ArticleName>Polkupyörä</ArticleName>
-    <UnitPriceAmount>234.3</UnitPriceAmount>
+    <ArticleName />
+    <UnitPriceAmount>2</UnitPriceAmount>
   </InvoiceRow>
 </Finvoice>

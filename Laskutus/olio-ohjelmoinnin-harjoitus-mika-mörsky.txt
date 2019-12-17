@@ -1,0 +1,30 @@
+Hei,
+
+Tässä vähän jotain infoa Olio-ohjelmoinnin harjoitustyöstä.
+
+Tilaus/laskutus ohjelma
+
+Ohjelma muodostaa tilauksen Tilaus- luokan avulla kysymällä ensin myyjän ja ostajan tiedot ja sen jälkeen tuoterivit. 
+Kun tuote rivejä on syötetty haluttu määrä, ohjelma tulostaa tilauksen näytölle ja tallentaa tilaus-olion datan 
+binäärimuodossa ja serialisoi Finvoice olison skeeman mukaiseksi e-laskuksi XML-tiedostoon. 
+Uudelleen ajettaessa ohjelma kysyy halutaanko ladata tallennettu tilaus ja näin jatkaa tilausrivien syöttämistä.
+
+- Projektia varten on luotu XSD.EXE työkalulla Finvoice luokka finvoice3.0.xsd tiedostosta.
+- Tuote olio voidaan luoda suoraan antamalla konstruktorin parametreina tuotteen nimen ja hinnan tai sitten käyttämällä
+  AnnaTuote - metodia
+- Henkilo luokasta periytetään Myyja ja Ostaja luokat, joissa ylikirjotetaan AnnaTiedot metodi.
+- Henkilö luokassa on määritelty propertyja, joilla muokataan luokan yksityisiä muuttujia, 
+  joiden näkyvyys on määritelty yksityiseksi.
+- TalletaLataa luokka toteuttaa kaksi eri interfacea binääridatan lataukseen ja tallentamiseen. (Lisäksi tämä luokka voisi olla
+  periytetty jostain toisesta luokasta, en keksinyt mitään järkevää. Siinä tapauksessa interfacet tulisi perityn luokan jälkeen
+  luokkaesittelyssä esim: class TalletaLataa : JokuLuokka , ITalleta, ILataa)
+- Tilaus luokka sisältää listan Tuote-olioista
+- Käytettäessä TalletaLataa-luokkaa lataamiseen annetaan parametrina olioviite Tilaus-luokan olioon, johon ladattu
+  tieto sijoitetaan.
+  
+
+  
+  t. Mika Mörsky
+
+
+
